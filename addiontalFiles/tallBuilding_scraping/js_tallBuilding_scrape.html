@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+
+<a href='#' onclick='downloadCSV({ filename: "sea_200+TallBuildings_5.csv" });'>Download CSV</a>
+
+<script type="text/javascript">
+
+// Reference: https://halistechnology.com/2015/05/28/use-javascript-to-export-your-data-as-csv/
+
+
+// The following is the map on the webpage of the 5 200m+ buildings in seattle http://skyscrapercenter.com/compare-data/submit?type%5B%5D=building&status%5B%5D=COM&status%5B%5D=UC&status%5B%5D=UCT&status%5B%5D=STO&function%5B%5D=office&function%5B%5D=residential&function%5B%5D=hotel&function%5B%5D=mixed-use&base_region=0&base_country=0&base_city=1680&base_height_range=4&base_company=All&base_min_year=1885&base_max_year=9999&comp_region=0&comp_country=0&comp_city=0&comp_height_range=3&comp_company=All&comp_min_year=1960&comp_max_year=2018&skip_comparison=on&output%5B%5D=map&dataSubmit=Show+Results
+// from the soure code of the webpage which contains the locations of the buildings
+
+var buildings = [{"id":611,"url":"\/building\/columbia-center\/611","name":"Columbia Center","status":"COM","height_architecture":284.38000488281,"longitude":-122.33059692383,"latitude":47.604640960693,"rank":1,"name_linked":"<a href='\/building\/columbia-center\/611' target='_blank'>Columbia Center<\/a>","country_id":163,"country_chinese":"","city_id":1680,"country_locode":"US","country_slug":"united-states","city_locode":"SEA","city":"Seattle","city_slug":"seattle","height_architecture_formatted":284.4,"height_architecture_ft_formatted":"933","floors_above":76,"completed":1984,"start":1982,"structural_material":"composite","functions":"office","image":""},{"id":1045,"url":"\/building\/1201-third-avenue-tower\/1045","name":"1201 Third Avenue Tower","status":"COM","height_architecture":235.30999755859,"longitude":-122.3360824585,"latitude":47.607269287109,"rank":2,"name_linked":"<a href='\/building\/1201-third-avenue-tower\/1045' target='_blank'>1201 Third Avenue Tower<\/a>","country_id":163,"country_chinese":"","city_id":1680,"country_locode":"US","country_slug":"united-states","city_locode":"SEA","city":"Seattle","city_slug":"seattle","height_architecture_formatted":235.3,"height_architecture_ft_formatted":"772","floors_above":55,"completed":1988,"start":1986,"structural_material":"steel","functions":"office","image":""},{"id":1176,"url":"\/building\/two-union-square\/1176","name":"Two Union Square","status":"COM","height_architecture":225.55999755859,"longitude":-122.33194732666,"latitude":47.610439300537,"rank":3,"name_linked":"<a href='\/building\/two-union-square\/1176' target='_blank'>Two Union Square<\/a>","country_id":163,"country_chinese":"","city_id":1680,"country_locode":"US","country_slug":"united-states","city_locode":"SEA","city":"Seattle","city_slug":"seattle","height_architecture_formatted":225.6,"height_architecture_ft_formatted":"740","floors_above":56,"completed":1989,"start":1987,"structural_material":"composite","functions":"office","image":""},{"id":1248,"url":"\/building\/seattle-municipal-tower\/1248","name":"Seattle Municipal Tower","status":"COM","height_architecture":220.07000732422,"longitude":-122.32940673828,"latitude":47.605239868164,"rank":4,"name_linked":"<a href='\/building\/seattle-municipal-tower\/1248' target='_blank'>Seattle Municipal Tower<\/a>","country_id":163,"country_chinese":"","city_id":1680,"country_locode":"US","country_slug":"united-states","city_locode":"SEA","city":"Seattle","city_slug":"seattle","height_architecture_formatted":220.1,"height_architecture_ft_formatted":"722","floors_above":57,"completed":1990,"start":1987,"structural_material":"steel","functions":"office","image":""},{"id":1796,"url":"\/building\/the-mark\/1796","name":"The Mark","status":"UCT","height_architecture":201.16999816895,"longitude":-122.33104705811,"latitude":47.605201721191,"rank":5,"name_linked":"<a href='\/building\/the-mark\/1796' target='_blank'>The Mark<\/a>","country_id":163,"country_chinese":"","city_id":1680,"country_locode":"US","country_slug":"united-states","city_locode":"SEA","city":"Seattle","city_slug":"seattle","height_architecture_formatted":201.2,"height_architecture_ft_formatted":"660","floors_above":43,"completed":2017,"start":2014,"structural_material":"composite","functions":"office \/ hotel","image":""}];
+
+
+  function convertArrayOfObjectsToCSV(args) {
+      var result, ctr, keys, columnDelimiter, lineDelimiter, data;
+
+      data = args.data || null;
+      if (data == null || !data.length) {
+          return null;
+      }
+
+      columnDelimiter = args.columnDelimiter || ',';
+      lineDelimiter = args.lineDelimiter || '\n';
+
+      keys = Object.keys(data[0]);
+
+      result = '';
+      result += keys.join(columnDelimiter);
+      result += lineDelimiter;
+
+      data.forEach(function(item) {
+          ctr = 0;
+          keys.forEach(function(key) {
+              if (ctr > 0) result += columnDelimiter;
+
+              result += item[key];
+              ctr++;
+          });
+          result += lineDelimiter;
+      });
+      console.log(result);
+      return result;
+  }
+
+
+    function downloadCSV(args) {
+        var data, filename, link;
+
+        var csv = convertArrayOfObjectsToCSV({
+            data: buildings
+        });
+        if (csv == null) return;
+
+        filename = args.filename || 'export.csv';
+
+        if (!csv.match(/^data:text\/csv/i)) {
+            csv = 'data:text/csv;charset=utf-8,' + csv;
+        }
+        data = encodeURI(csv);
+
+        link = document.createElement('a');
+        link.setAttribute('href', data);
+        link.setAttribute('download', filename);
+        link.click();
+    }
+</script>
+</body>
+</html>
