@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "# MUSA 620 Final Project\n\n## Install the following packages\n\n```\n# install.packages(\"shiny\")\n# install.packages(\"leaflet\")\n# install.packages(\"dplyr\")\n# install.packages(\"reshape2\")\n# install.packages(\"lattice\")\n# install.packages(\"tidyr\")\n# install.packages(\"scales\")\n# install.packages(\"ggplot2\")\n# install.packages(\"lubridate\")\n# install.packages('rgdal')\n# install.packages('readr')\n\nshiny::runGitHub(\"laylasun/musa620_shinyFinal/app\")\n```\n\n\n\n",
+    "contents" : "# MUSA 620 Final Project\n\n## Read [this](https://github.com/laylasun/musa620_shinyFinal/blob/master/app/about.md)\n\n## Install the following packages\n\n```\n# install.packages(\"shiny\")\n# install.packages(\"leaflet\")\n# install.packages(\"dplyr\")\n# install.packages(\"reshape2\")\n# install.packages(\"lattice\")\n# install.packages(\"tidyr\")\n# install.packages(\"scales\")\n# install.packages(\"ggplot2\")\n# install.packages(\"lubridate\")\n# install.packages('rgdal')\n# install.packages('readr')\n\n```\n\n\n\n",
     "created" : 1494079868247.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2363736394",
+    "hash" : "1482758324",
     "id" : "21A8372",
-    "lastKnownWriteTime" : 1494079912,
-    "last_content_update" : 1494079910649,
+    "lastKnownWriteTime" : 1494081536,
+    "last_content_update" : 1494081535105,
     "path" : "E:/620/620finalproject/musa620_shinyFinal/app/README.md",
     "project_path" : "README.md",
     "properties" : {

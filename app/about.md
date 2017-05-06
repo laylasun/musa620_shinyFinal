@@ -85,7 +85,8 @@ For detailed explanation of the project, please read this [write-up.](https://gi
 2. Web scraping ([files](https://github.com/laylasun/musa620_shinyFinal/tree/master/addiontalFiles/esri_xhr_scraping)) on map based on **Response** in XHR using R package `jsonlite` to get related data from esri's living atlas layer.
 
 
-To run this app locally make sure you've installed the R packages, 
+To run this app locally make sure you've installed the R packages.
+
 ```
 # install.packages("shiny")
 # install.packages("leaflet")
@@ -98,12 +99,6 @@ To run this app locally make sure you've installed the R packages,
 # install.packages("lubridate")
 # install.packages('rgdal')
 # install.packages('readr')
-```
-
-then run:
-
-```
-shiny::runGitHub("laylasun/musa620_shinyFinal/app")
 ```
 
 

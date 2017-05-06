@@ -1,5 +1,7 @@
 # MUSA 620 Final Project
 
+## Read [this](https://github.com/laylasun/musa620_shinyFinal/blob/master/app/about.md)
+
 ## Install the following packages
 
 ```
@@ -15,7 +17,6 @@
 # install.packages('rgdal')
 # install.packages('readr')
 
-shiny::runGitHub("laylasun/musa620_shinyFinal/app")
 ```
 
 
