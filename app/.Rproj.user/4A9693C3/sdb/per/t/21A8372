@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# MUSA 620 Final Project\n\n## Install the following packages\n\n```\n# install.packages(\"shiny\")\n# install.packages(\"leaflet\")\n# install.packages(\"dplyr\")\n# install.packages(\"reshape2\")\n# install.packages(\"lattice\")\n# install.packages(\"tidyr\")\n# install.packages(\"scales\")\n# install.packages(\"ggplot2\")\n# install.packages(\"lubridate\")\n# install.packages('rgdal')\n# install.packages('readr')\n\nshiny::runGitHub(\"laylasun/musa620_shinyFinal/app\")\n```\n\n\n\n",
+    "created" : 1494079868247.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2363736394",
+    "id" : "21A8372",
+    "lastKnownWriteTime" : 1494079912,
+    "last_content_update" : 1494079910649,
+    "path" : "E:/620/620finalproject/musa620_shinyFinal/app/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
