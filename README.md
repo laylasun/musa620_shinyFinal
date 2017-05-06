@@ -3,7 +3,7 @@
 ### In the app folder
 - [Detailed description of the app](https://github.com/laylasun/musa620_shinyFinal/blob/master/app/about.md)
 - [Published App Link](https://laylasun.shinyapps.io/musa620_shinyFinal/)
-- [Source Code](https://github.com/laylasun/musa620_shinyFinal/app
+- [Source Code](https://github.com/laylasun/musa620_shinyFinal/tree/master/app)
 
 ![quicklook](https://raw.githubusercontent.com/laylasun/musa620_shinyFinal/master/imagesForReadme/img001.png)
 
